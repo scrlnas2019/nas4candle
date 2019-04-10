@@ -754,7 +754,7 @@ def log_evaluation(metric_outputs, description='Comparing y_true and y_pred:'):
 
 from nas4candle.nasapi.benchmark.util import numpy_dict_cache
 
-# @numpy_dict_cache('/dev/shm/combo_data.npz')
+@numpy_dict_cache('/dev/shm/combo_data.npz')
 def combo_ld_numpy(args, prop=0.1):
 
     # CANDLE

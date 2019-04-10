@@ -585,7 +585,7 @@ def load_data_source():
     return data
 
 
-@numpy_dict_cache('/projects/datascience/regele/data-tmp/uno_data_rdm.npz')
+@numpy_dict_cache('/projects/datascience/username/data-tmp/uno_data_rdm.npz')
 def load_data1():
     return load_data_source()
 
@@ -720,58 +720,4 @@ def main():
     run(params)
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1 and sys.argv[1] == 'dl':
-        print('DOWNOADING DATA')
-        sys.argv = sys.argv[:1]
-        load_data1()
-    elif len(sys.argv) > 1 and sys.argv[1] == 'test':
-        print('TEST RUN_MODEL')
-        sys.argv = sys.argv[:1]
-        from nas4candle.candle.Uno.problems.problem_exp3 import Problem
-        config = Problem.space
-        config['arch_seq'] = [
-            0.08333333333333333,
-            0.25,
-            0.375,
-            0.7916666666666666,
-            0.875,
-            0.08333333333333333,
-            0.875,
-            0.25,
-            0.25,
-            0.7916666666666666,
-            0.875,
-            0.8333333333333334,
-            0.75,
-            0.08333333333333333,
-            0.2916666666666667,
-            0.875,
-            0.08333333333333333,
-            0.5416666666666666,
-            0.3333333333333333,
-            0.75,
-            0.7916666666666666,
-            0.75,
-            0.625,
-            0.25,
-            0.08333333333333333,
-            0.08333333333333333,
-            0.4166666666666667,
-            0.4583333333333333,
-            0.08333333333333333,
-            0.25,
-            0.08333333333333333,
-            0.20833333333333334,
-            0.5416666666666666,
-            0.5416666666666666,
-            0.25,
-            0.5416666666666666,
-            0.25
-        ]
-        # config['hyperparameters']['batch_size'] = 128
-        config['hyperparameters']['num_epochs'] = 20
-        run_model(config)
-    else:
-        main()
-        if K.backend() == 'tensorflow':
-            K.clear_session()
+    load_data1()

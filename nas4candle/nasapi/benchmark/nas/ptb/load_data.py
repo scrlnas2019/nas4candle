@@ -73,7 +73,7 @@ def load_data(config=None):
 
     """
     num_steps = 10
-    data_path = '/projects/datascience/regele/nas4candle.nasapi/benchmark/ptbNas/DATA'
+    data_path = '/projects/datascience/username/nas4candle.nasapi/benchmark/ptbNas/DATA'
     batch_size = 32
     if config and 'batch_size' in config: batch_size = config['batch_size']
     if config and 'num_steps' in config: num_steps = config['num_steps']
