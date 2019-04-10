@@ -26,6 +26,11 @@ balsam app --name RDM --exe nas4candle/nasapi/search/nas/nas_random.py
 
 ## Combo
 
+To download data:
+```
+python nas4candle/candle/Combo/combo_baseline_keras2.py
+```
+
 ### Small search space
 
 Async:
@@ -68,6 +73,11 @@ balsam submit-launch --job-mode mpi -n 256 -t 360 -q default -A $PROJECT_NAME --
 
 ## Uno
 
+To download data:
+```
+python nas4candle/candle/Uno/uno_baseline_keras2.py
+```
+
 ### Large search space
 
 Async:
@@ -78,6 +88,12 @@ balsam submit-launch --job-mode mpi -n 256 -t 360 -q default -A $PROJECT_NAME --
 
 ## NT3
 
+To download data:
+```
+python nas4candle/candle/NT3/nt3_baseline_keras2.py
+```
+
+Run small search space:
 ```
 balsam job --name nt3_async_small --workflow nt3_async_small --app A3C --num-nodes 22 --args '--evaluator balsam --run nas4candle.nasapi.search.nas.model.run.alpha.run --problem nas4candle.candle.NT3.problems.problem_small.Problem'
 balsam submit-launch --job-mode mpi -n 256 -t 360 -q default -A $PROJECT_NAME --wf-filter nt3_async_small

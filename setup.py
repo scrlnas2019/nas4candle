@@ -3,7 +3,7 @@ from setuptools import setup
 
 install_requires=[
     'pandas',
-    'matplotlib'
+    'matplotlib',
     'numpy',
     'scikit-optimize',
     'scikit-learn',
