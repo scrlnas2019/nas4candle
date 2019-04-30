@@ -584,8 +584,10 @@ def load_data_source():
     print('SIZE VALID: ', int(len(y_val)))
     return data
 
+import getpass
+username = getpass.getuser()
 
-@numpy_dict_cache('/projects/datascience/username/data-tmp/uno_data_rdm.npz')
+@numpy_dict_cache(f'/home/{username}/data-tmp/uno_data_rdm.npz')
 def load_data1():
     return load_data_source()
 
