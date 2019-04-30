@@ -5,8 +5,31 @@ For Theta at ALCF.
 ## Installation
 
 ```
-cd nas4candle
-pip install -e .
+$ module load cray-python/3.6.1.1
+$ module load balsam/0.3
+$ mkdir nas4candle-env
+$ python -m venv --system-site-packages nas4candle-env
+$ source nas4candle-env/bin/activate
+$ git clone https://github.com/scrlnas2019/nas4candle.git
+$ cd nas4candle
+$ pip install --user -e .
+```
+
+## Download data
+
+For Combo:
+```
+$ python nas4candle/nas4candle/candle/Combo/combo_baseline_keras2.py
+```
+
+For NT3:
+```
+$ mkdir ~/data-tmp
+$ python nas4candle/nas4candle/candle/NT3/nt3_baseline_keras2.py
+```
+
+For Uno:
+```
 ```
 
 ## Balsam init

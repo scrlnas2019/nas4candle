@@ -72,13 +72,13 @@ def load_data2(train_path, test_path, gParameters):
 
     return X_train, Y_train, X_test, Y_test
 
-@numpy_dict_cache('/projects/datascience/username/data-tmp/nt3_data.npz')
+@numpy_dict_cache('~/data-tmp/nt3_data.npz')
 def load_data1():
     gParameters = initialize_parameters()
     print ('Params:', gParameters)
 
     file_train = gParameters['train_data']
-    file_test = gParameters['test_data']
+    file_test = gParameters['test_d~ta']
     url = gParameters['data_url']
 
     train_file = candle.get_file(file_train, url+file_train, cache_subdir='Pilot1')
@@ -99,7 +99,7 @@ def load_data1():
     }
     return data
 
-# @numpy_dict_cache('/dev/shm/nt3_data.py')
+@numpy_dict_cache('/dev/shm/nt3_data.npz')
 def load_data_proxy():
     return load_data1()
 
