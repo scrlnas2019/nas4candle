@@ -4,11 +4,11 @@ from setuptools import setup
 install_requires=[
     'pandas',
     'matplotlib',
-    'numpy',
+    'numpy>=1.13.3',
     'scikit-optimize',
     'scikit-learn',
     'tqdm',
-    'tensorflow>=1.11.0',
+    'tensorflow==1.13.1',
     'keras',
     'deap', # GA search
     # nas
