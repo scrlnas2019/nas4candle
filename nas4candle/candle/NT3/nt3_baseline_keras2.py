@@ -78,7 +78,7 @@ def load_data1():
     print ('Params:', gParameters)
 
     file_train = gParameters['train_data']
-    file_test = gParameters['test_dta']
+    file_test = gParameters['test_data']
     url = gParameters['data_url']
 
     train_file = candle.get_file(file_train, url+file_train, cache_subdir='Pilot1')
