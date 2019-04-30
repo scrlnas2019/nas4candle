@@ -12,6 +12,11 @@ $ python -m venv --system-site-packages nas4candle-env
 $ source nas4candle-env/bin/activate
 $ git clone https://github.com/scrlnas2019/nas4candle.git
 $ pip install --user -e nas4candle
+```
+
+
+Set your project name:
+```
 $ export PROJECT_NAME="project_name"
 ```
 
