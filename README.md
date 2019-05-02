@@ -49,9 +49,9 @@ source balsamactivate nas4candledb
 
 To create balsam applications for A3C, A2C and RDM:
 ```
-balsam app --name A3C --exe nas4candle/nasapi/search/nas/ppo_a3c_async.py
-balsam app --name A2C --exe nas4candle/nasapi/search/nas/ppo_a3c_sync.py
-balsam app --name RDM --exe nas4candle/nasapi/search/nas/nas_random.py
+balsam app --name A3C --exe nas4candle/nas4candle/nasapi/search/nas/ppo_a3c_async.py
+balsam app --name A2C --exe nas4candle/nas4candle/nasapi/search/nas/ppo_a3c_sync.py
+balsam app --name RDM --exe nas4candle/nas4candle/nasapi/search/nas/nas_random.py
 ```
 
 now if you run `balsam ls apps`, the expected output is:
